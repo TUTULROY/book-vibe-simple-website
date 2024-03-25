@@ -1,0 +1,81 @@
+[
+    {
+      "bookId": 1,
+      "bookName": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "image": "https://i.postimg.cc/RVQkwXBY/kindpng-4945926-1.png",
+      "review": "A brilliant portrayal of the Jazz Age...",
+      "totalPages": 218,
+      "rating": 4.5,
+      "category": "Classic",
+      "tags": ["Fiction", "Romance", "Drama"],
+      "publisher": "Scribner",
+      "yearOfPublishing": 1925
+    },
+    {
+      "bookId": 2,
+      "bookName": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "image": "https://i.postimg.cc/RVQkwXBY/kindpng-4945926-1.png",
+      "review": "An American classic that tackles issues of race...",
+      "totalPages": 324,
+      "rating": 4.8,
+      "category": "Classic",
+      "tags": ["Fiction", "Legal drama"],
+      "publisher": "J. B. Lippincott & Co.",
+      "yearOfPublishing": 1960
+    },
+    {
+      "bookId": 3,
+      "bookName": "1984",
+      "author": "George Orwell",
+      "image": "https://i.postimg.cc/RVQkwXBY/kindpng-4945926-1.png",
+      "review": "A dystopian masterpiece that remains relevant today...",
+      "totalPages": 328,
+      "rating": 4.6,
+      "category": "Science Fiction",
+      "tags": ["Dystopian", "Political fiction"],
+      "publisher": "Secker & Warburg",
+      "yearOfPublishing": 1949
+    },
+    {
+      "bookId": 4,
+      "bookName": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "image": "https://i.postimg.cc/RVQkwXBY/kindpng-4945926-1.png",
+      "review": "A timeless romance set in the Regency era...",
+      "totalPages": 279,
+      "rating": 4.7,
+      "category": "Classic",
+      "tags": ["Romance", "Social satire"],
+      "publisher": "T. Egerton, Whitehall",
+      "yearOfPublishing": 1813
+    },
+    {
+      "bookId": 5,
+      "bookName": "The Catcher in the Rye",
+      "author": "J. D. Salinger",
+      "image": "https://i.postimg.cc/RVQkwXBY/kindpng-4945926-1.png",
+      "review": "A coming-of-age novel that captures the angst of adolescence...",
+      "totalPages": 224,
+      "rating": 4.4,
+      "category": "Modern Fiction",
+      "tags": ["Coming-of-age", "Literary fiction"],
+      "publisher": "Little, Brown and Company",
+      "yearOfPublishing": 1951
+    },
+    {
+      "bookId": 6,
+      "bookName": "Harry Potter and the Philosopher's Stone",
+      "author": "J. K. Rowling",
+      "image": "https://i.postimg.cc/RVQkwXBY/kindpng-4945926-1.png",
+      "review": "The magical journey of a young wizard...",
+      "totalPages": 332,
+      "rating": 4.9,
+      "category": "Fantasy",
+      "tags": ["Magic", "Adventure"],
+      "publisher": "Bloomsbury",
+      "yearOfPublishing": 1997
+    }
+  ]
+  
