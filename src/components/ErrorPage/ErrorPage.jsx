@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const ErrorPage = () => {
     return (
         <div>
-        <h2>Opss!!</h2>
+        <h2>Oops!!</h2>
         <Link to="/">Go Back To Home</Link>
     </div>
     );

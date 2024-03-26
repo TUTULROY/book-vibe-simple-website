@@ -1,31 +1,66 @@
-
-import { useEffect, useState } from "react";
-import BookDetail from "../BookDetail/BookDetail";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 
 
 const BookDetails = () => {
-const [books, setBooks] = useState([]);
-useEffect(() =>{
-
-        fetch('book.json')
-        .then(res => res.json())
-        .then(data => setBooks(data));
-
-}, [])
-
-
+        const books = useLoaderData();
+        const {bookId} = useParams()
+        const idInt = parseInt(bookId);
+        const book = books.find(book => book.bookId === idInt);
+        // const [bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing] = book;
+    //    console.log(book);
 
     return (
         <div>
-            <h2 className="text-6xl text-center font-extraBold mt-6 mb-8">Book</h2>
+            <h2>Book:{bookId}</h2>
+            <div className="hero min-h-screen bg-base-200">
+  <div className="hero-content flex-col lg:flex-row">
+    <img  src={book.image} className="max-w-sm rounded-lg shadow-2xl mr-6" />
+    <div>
+      <h1 className="text-5xl font-bold mb-3">{book.bookName}</h1>
+      <p className="mb-2">by:{book.author}</p>
+      <hr />
+      <p className="mt-2 mb-2">{book.category}</p>
+      <hr />
+      <p className="py-6">{book.review}</p>
+      <p className="mb-3"> <span className="text-xl font-bold">Tag</span>  <span className="mr-2 btn btn-ghost rounded-full text-green-500">#{book.tags[0]} </span>
+     <span className="ml-2 btn btn-ghost rounded-full text-green-500">#{book.tags[1]}</span>
+      </p>
+      
+      <hr />
 
-            <div className="grid grid-cols-3">
-                {
-                books.map(book =><BookDetail key={book.id} book={book}></BookDetail>)
-            }
-            </div>
-        </div>
+      <div className="mb-4">
+      
+
      
+       <div className="flex gap-40 my-4">
+        <h2>Number of Pages:</h2>
+        <h2 className="font-extrabold">{book.totalPages}</h2>
+       </div>
+      
+        <div className="flex gap-52 my-4">
+        <h2>Publisher:</h2>
+        <h2 className="font-extrabold">{book.publisher}</h2>
+
+        </div>
+        <div className="flex gap-40 my-4">
+        <h2>Year of Publishing:</h2> <h2 className="font-extrabold">{book.yearOfPublishing}</h2>
+        </div>
+        <div className="flex gap-64 my-4">
+
+      <h2>Rating:</h2>  <h2 className="font-extrabold"> {book.rating}</h2>
+      </div>
+      
+      </div>
+      
+
+      <div>
+        <Link className="mr-3 btn btn-active btn-ghost">Read Me</Link>
+        <Link className="btn btn-accent">Wishlist</Link>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
     );
 };
 

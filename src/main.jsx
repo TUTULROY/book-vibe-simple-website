@@ -5,6 +5,10 @@ import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Root from './components/Root/Root.jsx'
 import ErrorPage from './components/ErrorPage/ErrorPage.jsx'
+
+import Home from './components/Home/Home.jsx'
+import ListedBook from './components/ListedBook/ListedBook.jsx'
+import PagesToRead from './components/PagesToRead/PagesToRead.jsx'
 import BookDetails from './components/BookDetails/BookDetails.jsx'
 
 
@@ -16,8 +20,21 @@ const router = createBrowserRouter([
   errorElement:<ErrorPage></ErrorPage>,
   children:[
     {
-      path:"/",
-      element:<BookDetails></BookDetails>
+      path:'/',
+      element:<Home></Home>
+    },
+    {
+      path:'/book/:bookId',
+      element:<BookDetails></BookDetails>,
+      loader: () => fetch('../book.json')
+    },
+    {
+      path:'/lists',
+      element:<ListedBook></ListedBook>
+    },
+    {
+      path:'/pages',
+      element:<PagesToRead></PagesToRead>
     }
   ],
 }
