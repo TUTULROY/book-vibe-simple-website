@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { getStoredBookDetail } from "../utility/localstorage";
+import ReadBooks from "../ReadBooks/ReadBooks";
 
 
 const ListedBook = () => {
@@ -22,13 +23,13 @@ setDetailBooks(booksDetail);
         }
     },[])
 
-   
+   const [tabIndex, setTabIndex] = useState(0);
     
 
     return (
         <div>
             <div className="text-center">
-            <h2 className="text-2xl">More List Book</h2>
+            <h2 className="text-4xl max-w-6xl font-bold">Book</h2>
             <div className="dropdown dropdown-end ">
   <div tabIndex={0} role="button" className="btn m-1 bg-green-500 text-[#FFFFFF] rounded-full ">Sort By</div>
   <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
@@ -37,16 +38,23 @@ setDetailBooks(booksDetail);
   </ul>
 </div>
 </div>
+<div role="tablist" className="tabs tabs-lifted w-96 gap-7">
+  <Link 
+//   to={}
+onClick={() => setTabIndex(0)}
+  role="tab" className={`tab ${tabIndex === 0 ? 'tab-active' : 'tab'}`}>Read Book</Link>
+  <Link
+  onClick={() => setTabIndex(1)}
+  
+  role="tab" className={`tab ${tabIndex === 1 ? 'tab-active' : 'tab'}`}>Wishlist Book</Link>
+  
+</div>
 
-
-        <ul>
+       <div className="my-6 py-5">
             {
-                detailBooks.map(book => <li key={book.bookId}>
-                    <span>{book.bookName} {book.review}</span>
-
-                </li>)
+                detailBooks.map(book => <ReadBooks key={book.bookId} book={book}></ReadBooks> )
             }
-        </ul>
+       </div>
 
         </div>
     );

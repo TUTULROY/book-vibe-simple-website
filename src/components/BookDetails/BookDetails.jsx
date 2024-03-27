@@ -12,11 +12,11 @@ const BookDetails = () => {
         const book = books.find(book => book.bookId === idInt);
        
 const handleAddToRead = () =>{
-    saveBookDetail(idInt);
+    saveBookDetail(idInt)
     toast('you added successful')
 }
 const handleAddToWishList = () =>{
-    saveBookDetail(idInt);
+    saveBookDetail(idInt)
     toast('you added successful')
 }
     
