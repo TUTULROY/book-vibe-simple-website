@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const Banner = () => {
@@ -8,8 +9,9 @@ const Banner = () => {
     <img src="https://i.postimg.cc/wTtWBvsG/pngwing-1.jpg" className="max-w-sm rounded-lg shadow-2xl" />
     <div>
       <h1 className="text-5xl font-bold mr-3 mb-3">Books to freshen up <br /> your bookshelf</h1>
-      
+     <Link to={`lists`}>
       <button className="btn btn-success text-white rounded-xl">View The List</button>
+      </Link>
     </div>
   </div>
 </div>

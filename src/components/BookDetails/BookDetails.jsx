@@ -1,4 +1,8 @@
 import { Link, useLoaderData, useParams } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { saveBookDetail } from "../utility/localstorage";
+
 
 
 const BookDetails = () => {
@@ -6,12 +10,19 @@ const BookDetails = () => {
         const {bookId} = useParams()
         const idInt = parseInt(bookId);
         const book = books.find(book => book.bookId === idInt);
-        // const [bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing] = book;
-    //    console.log(book);
-
+       
+const handleAddToRead = () =>{
+    saveBookDetail(idInt);
+    toast('you added successful')
+}
+const handleAddToWishList = () =>{
+    saveBookDetail(idInt);
+    toast('you added successful')
+}
+    
     return (
         <div>
-            <h2>Book:{bookId}</h2>
+            
             <div className="hero min-h-screen bg-base-200">
   <div className="hero-content flex-col lg:flex-row">
     <img  src={book.image} className="max-w-sm rounded-lg shadow-2xl mr-6" />
@@ -54,12 +65,13 @@ const BookDetails = () => {
       
 
       <div>
-        <Link className="mr-3 btn btn-active btn-ghost">Read Me</Link>
-        <Link className="btn btn-accent">Wishlist</Link>
+        <Link onClick={handleAddToRead}  className="mr-3 btn btn-active btn-ghost">Read Me</Link>
+        <Link onClick={handleAddToWishList}  className="btn btn-accent">Wishlist</Link>
       </div>
     </div>
   </div>
 </div>
+<ToastContainer />
         </div>
     );
 };
