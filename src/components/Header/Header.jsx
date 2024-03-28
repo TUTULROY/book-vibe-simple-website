@@ -9,9 +9,9 @@ const Header = () => {
      
       <li><NavLink to="/lists">Listed Books</NavLink></li>
       <li><NavLink to="/pages">Pages to Read</NavLink></li>
-<li><NavLink to="/statistics">Statistics</NavLink></li>
+<li><NavLink to="/contact">Contacts</NavLink></li>
 
-      <li><NavLink to="/blogs">Blogs</NavLink></li>
+      <li><NavLink to="/about">About</NavLink></li>
         
         
         

@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "image": "https://i.postimg.cc/7hfjVFQq/the1-n.jpg",
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "phone": "+1234567890",
+        "country": "USA"
+    },
+    {
+        "id": 2,
+        "image": "https://i.postimg.cc/7hfjVFQq/the1-n.jpg",
+        "name": "Jane Smith",
+        "email": "jane.smith@example.com",
+        "phone": "+1987654321",
+        "country": "England"
+    }
+]
