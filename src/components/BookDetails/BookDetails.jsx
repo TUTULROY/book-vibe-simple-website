@@ -53,7 +53,7 @@ const handleAddToWishList = () =>{
         <h2 className="font-extrabold">{book.publisher}</h2>
 
         </div>
-        <div className="flex gap-40 my-4">
+        <div className="flex flex gap-40 my-4">
         <h2>Year of Publishing:</h2> <h2 className="font-extrabold">{book.yearOfPublishing}</h2>
         </div>
         <div className="flex gap-64 my-4">

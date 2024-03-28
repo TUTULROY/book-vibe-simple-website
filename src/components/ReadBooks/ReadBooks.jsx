@@ -33,7 +33,9 @@ const ReadBooks = ({book}) => {
     <div className="card-actions ">
         <button className="btn btn-outline btn-info rounded-full">Category: {book.category}</button>
         <button className="btn btn-outline btn-warning rounded-full">Rating {book.rating}</button>
-      <Link className="btn btn-success text-white rounded-full">View Details</Link>
+      <Link to={`../book/${book.bookId}`}> 
+      <button className="btn btn-success text-white rounded-full">View Details</button>
+      </Link>
     </div>
   </div>
 </div>
