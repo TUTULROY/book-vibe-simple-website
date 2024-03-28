@@ -7,7 +7,7 @@ const ReadBooks = ({book}) => {
     saveBookDetail();
     return (
         <div>
-            <div className="card my-6 card-side max-w-6xl h-72 bg-base-100 shadow-xl">
+            <div className="card my-6 card-side max-w-6xl lg:h-72 bg-base-100 shadow-xl">
   <figure><img src={book.image} alt="Movie"/></figure>
   <div className="card-body">
     <h2 className="card-title">{book.bookName}</h2>

@@ -13,11 +13,21 @@ const BookDetails = () => {
        
 const handleAddToRead = () =>{
     saveBookDetail(idInt)
-    toast('you added successful')
+    const addedSuccessfully = saveBookDetail(idInt);
+    if (!addedSuccessfully) {
+        toast.success('Book added to Readlist successfully');
+    } else {
+        toast.error('Book is already in the Readlist');
+    }
 }
 const handleAddToWishList = () =>{
     saveBookDetail(idInt)
-    toast('you added successful')
+    const addedSuccessfully = saveBookDetail(idInt);
+    if (!addedSuccessfully) {
+        toast.success('Book added to Wishlist successfully');
+    } else {
+        toast.error('Book is already in the Wishlist');
+    }
 }
     
     return (
