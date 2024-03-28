@@ -29,7 +29,7 @@ setDetailBooks(booksDetail);
 
 
    const handleBooksFilter = filter =>{
-    if(filter === 'review'){
+    if(filter === 'yearOfPublishing'){
         setDisplayBooks(detailBooks);
         displayBooks(detailBooks);
     }
@@ -53,7 +53,7 @@ setDetailBooks(booksDetail);
             <div className="dropdown dropdown-end ">
   <div tabIndex={0} role="button" className="btn m-1 bg-green-500 text-[#FFFFFF] rounded-full ">Sort By</div>
   <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-    <li onClick={() => handleBooksFilter('review')}><a>Review</a></li>
+    <li onClick={() => handleBooksFilter('review')}><a>Publisher</a></li>
     <li onClick={() => handleBooksFilter('totalPage')}><a>PageNumber</a></li>
     <li onClick={() => handleBooksFilter('rating')}><a>Rating</a></li>
   </ul>
