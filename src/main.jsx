@@ -13,6 +13,7 @@ import BookDetails from './components/BookDetails/BookDetails.jsx'
 import ReadBooks from './components/ReadBooks/ReadBooks.jsx'
 import WishListsBook from './components/WishListsBook/WishListsBook.jsx'
 import Contacts from './components/Contacts/Contacts.jsx'
+import About from './components/About/About.jsx'
 
 
 const router = createBrowserRouter([
@@ -54,7 +55,10 @@ const router = createBrowserRouter([
     {
       path:'/contact',
       element:<Contacts></Contacts>,
-      
+    },
+    {
+      path:'/about',
+      element:<About></About>
     }
     
   ],
